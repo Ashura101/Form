@@ -30,6 +30,7 @@ import { emailValidation, passwordValidation, letterValidation } from '../utils/
 import Slider from '@react-native-community/slider';
 import ImagePicker from 'react-native-image-crop-picker';
 import { StatusBar } from 'expo-status-bar';
+import Video from 'react-native-video';
 
 const { width } = Dimensions.get('window');
 
@@ -369,6 +370,8 @@ export default Form = () => {
     setFormData(Object.assign({}, formData, { technologies: selectedItems }));
   };
   /*----------Multi Select List end-----------*/
+  // const videoUrl = '../assets/videos/testVid.mov';
+  const videoUrl = '../assets/videos/bunny.mp4';
   return (
     <SafeAreaView style={styles.container}>
       {/* <StatusBar backgroundColor="skyblue" /> */}
@@ -406,6 +409,17 @@ export default Form = () => {
           <Icons name="camera-outline" size={30} style={{ alignSelf: 'center' }} />
         </TouchableOpacity>
 
+        <Video
+          source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }} // Can be a URL or a local file.
+          style={{
+            flex: 1,
+            height: 200,
+            width: '90%',
+            // marginHorizontal: 20,
+            borderWidth: 1,
+            alignSelf: 'center',
+          }}
+        />
         <Text style={styles.titleText}>Salary range(p.a)</Text>
         <View
           style={{
