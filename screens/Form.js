@@ -419,6 +419,7 @@ export default Form = () => {
             borderWidth: 1,
             alignSelf: 'center',
           }}
+          resizeMode={'cover'}
         />
         <Text style={styles.titleText}>Salary range(p.a)</Text>
         <View
